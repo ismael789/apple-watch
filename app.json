@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "Watch Home",
+    "slug": "watch-home",
+    "scheme": "watchhome",
+    "description": "Simulador educativo de reloj inspirado en watchOS, no afiliado con Apple",
+    "android": {
+      "package": "com.ismael.watchhome",
+      "allowBackup": false
+    },
+    "plugins": [
+      [
+        "expo-audio",
+        {
+          "enableBackgroundPlayback": true,
+          "enableBackgroundRecording": false,
+          "recordAudioAndroid": true,
+          "microphonePermission": "Permitir que Watch Home grabe notas de voz"
+        }
+      ],
+      "expo-font",
+      "expo-asset",
+      "expo-notifications",
+      "./plugins/withNoDataRestore",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permitir que Watch Home use la cámara",
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Permitir que Watch Home consulte tus fotografías",
+          "savePhotosPermission": "Permitir que Watch Home guarde fotografías",
+          "granularPermissions": []
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#000000",
+          "image": "./src/assets/watch-splash.png",
+          "imageWidth": 320,
+          "resizeMode": "contain",
+          "dark": {
+            "backgroundColor": "#000000",
+            "image": "./src/assets/watch-splash.png"
+          }
+        }
+      ],
+      "expo-sqlite",
+      "expo-secure-store"
+    ]
+  }
+}
